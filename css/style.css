@@ -148,6 +148,7 @@ select {
 }
 
 .ghost__btn:hover {
+   color: #FFF;
    border: 1px solid var(--blue);
    box-shadow: inset 600px 0 0 0 var(--blue);
 }
@@ -283,10 +284,11 @@ select {
 }
 
 /* PERSONAL INFO */
-.infoCards{
-   width: 100%;
+
+.infoCard {
    background: var(--lightGray);
    padding: 1.5rem;
+   border-radius: 15px;
 }
 
 .infoCards__personal, .infoCards__interests {
@@ -366,6 +368,7 @@ footer {
 }
 
 .upBtn:hover {
+   color: #FFF;
    background-color: var(--heavyBlue);
 }
 
@@ -457,12 +460,13 @@ footer .fab:hover {
 .btn__blue {
    background: var(--blue);
    color: #FFF;
-   padding: 1rem!important;
+   padding: 1rem;
    transition: .3s;
 }
 
 .btn__blue:hover {
    background: var(--heavyBlue);
+   color: #FFF;
 }
 
 /* RESPONSIVE */
@@ -490,11 +494,22 @@ footer .fab:hover {
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
 
    .infoCards__personal div {
-      width: 25%;
+      width: 48%;
+      border-radius: 10px;
+      padding: 1.1rem .75rem;
+      background-color: #FFF;
    }
 
    .infoCards__interests div {
       width: 22.5%;
+   }
+
+   .infoCards__interests div .fas {
+      font-size: 30px;
+   }
+
+   .infoCards__interests div h3 {
+      font-size: 13.5px;
    }
 
    .contactForm, .contactMap {
@@ -552,11 +567,6 @@ footer .fab:hover {
       margin-right: 1.25rem;
    }
 
-   .infoCards {
-      width: 47.5%;
-      border-radius: 10px;
-   }
-
    .infoCards__personal div {
       width: 46%;
       border-radius: 10px;
@@ -587,4 +597,30 @@ footer .fab:hover {
    .hideOnMobile {
       display: block;
    }
+
+   .contactMap iframe {
+      height: 95%;
+   }
+}
+
+/* BOOTSTRAP RESET */
+
+.navbar-dark .navbar-toggler {
+   border: none;
+}
+
+.navbar-toggler:focus {
+   box-shadow: none;
+}
+
+p {
+   margin: 0;
+}
+
+.row {
+   margin: 0;
+}
+
+.row>* {
+   padding: 0;
 }

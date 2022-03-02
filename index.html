@@ -5,29 +5,46 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="icon" type="image/x-icon" href="images/logo/favicon.png">
+   <!-- BOOTSTRAP -->
+   <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+   <!-- ESTILOS -->
    <link rel="stylesheet" href="css/style.css">
+   <!-- FONTAWESOME -->
    <script src="https://kit.fontawesome.com/040faf61ed.js" crossorigin="anonymous"></script>
    <title>Joss | Home</title>
 </head>
 <body>
 
-   <main class="grid">
+   <main class="row">
 
-      <!-- MENU -->
-      <header id="navBar">
-         <nav class="navBar__container">
-            <a href="index.html" class="navBar__Logo">JOSS</a>
-            <label for="show__menu" class="menu__icon"><span class="fas fa-bars"></span></label>
-            <input type="checkbox" id="show__menu">
-            <ul>
-               <li><a href="#"><u>Home</u></a></li>
-               <li><a href="pages/skills.html">Skills</a></li>
-               <li><a href="pages/resume.html">Resume</a></li>
-               <li><a href="pages/portfolio.html">Portfolio</a></li>
-               <li><a href="pages/contact.html">Contact</a></li>
-            </ul>
-         </nav>
-      </header>
+      <!-- MENU BOOTSTRAP -->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+         <div class="container">
+            <a class="navbar-brand navBar__Logo" href="index.html">JOSS</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+               <ul class="navbar-nav">
+                  <li class="nav-item">
+                     <a class="nav-link active" aria-current="page" href="#"><u>Home</u></a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="pages/skills.html">Skills</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="pages/resume.html">Resume</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="pages/portfolio.html">Portfolio</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="pages/contact.html">Contact</a>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </nav>
       
       <!-- HOME BANNER -->
       <div class="homeBanner">
@@ -41,90 +58,102 @@
       </div>
 
       <!-- PERSONAL DESCRIPTION -->
-      <div class="genContainer tac">
-         <h2>
-            ABOUT ME
-            <hr class="underLine">
-         </h2>
-         <br>
-         <p>Hi I'm Josafat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas quis ornare purus. Morbi luctus tortor nunc, vitae posuere nibh malesuada sed. In nec tortor eu nibh tristique vehicula sed in lectus. Phasellus vitae accumsan tortor. Fusce ac vestibulum ante.</p>
+      <div class="row justify-content-center">
+         <div class="col-7 text-center m-4">
+            <h2>
+               ABOUT ME
+               <hr class="underLine">
+            </h2>
+            <br>
+            <p>Hi I'm Josafat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas quis ornare purus. Morbi luctus tortor nunc, vitae posuere nibh malesuada sed. In nec tortor eu nibh tristique vehicula sed in lectus. Phasellus vitae accumsan tortor. Fusce ac vestibulum ante.</p>
+         </div>
       </div>
 
-      <!-- FLEX CONTAINER -->
-      <div class="fullContainer flexContainer flexWrap tac">
-         <!-- PERSONAL INFO -->
-         <div class="infoCards">
-            <h2>PERSONAL INFO</h2>
-            <!-- INFO ICONS -->
-            <div class="infoCards__personal">
-               <div>
-                  <i class="fas fa-birthday-cake"></i>
-                  <h3>Birthdate</h3>
-                  <p>05 march 1995</p>
-               </div>
-               <div>
-                  <i class="fas fa-phone-alt"></i>
-                  <h3>Phone</h3>
-                  <p>55 1582 4121</p>
-               </div>
-               <div>
-                  <i class="fas fa-envelope-open-text"></i>
-                  <h3>Email</h3>
-                  <p>jossdensmore@gmail.com</p>
-               </div>
-               <div>
-                  <i class="fas fa-map-marked-alt"></i>
-                  <h3>Address</h3>
-                  <p>Sn Perfecto 95, Sta Úrusula Coapa, CDMX 04600</p>
-               </div>
-            </div>
-         </div>
+      <!-- PERSONAL INFO -->
+      <div class="container">
+         <div class="row justify-content-around">
 
-         <!-- INTERESTS -->
-         <div class="infoCards">
-            <h2>MY INTERESTS</h2>
-            <!-- INTEREST ICONS -->
-            <div class="infoCards__interests">
-               <div>
-                  <i class="fas fa-drum"></i>
-                  <h3>DRUMS</h3>
+         <div class="col-md-6 p-4">
+            <div class="infoCard text-center">
+
+               <h2>PERSONAL INFO</h2>
+               <!-- PERSONAL ICONS -->
+               <div class="infoCards__personal">
+                  <div>
+                     <i class="fas fa-birthday-cake"></i>
+                     <h3>Birthdate</h3>
+                     <p>05 march 1995</p>
+                  </div>
+                  <div>
+                     <i class="fas fa-phone-alt"></i>
+                     <h3>Phone</h3>
+                     <p>55 1582 4121</p>
+                  </div>
+                  <div>
+                     <i class="fas fa-envelope-open-text"></i>
+                     <h3>Email</h3>
+                     <p>jossdensmore@gmail.com</p>
+                  </div>
+                  <div>
+                     <i class="fas fa-map-marked-alt"></i>
+                     <h3>Address</h3>
+                     <p>Sn Perfecto 95, Sta Úrusula Coapa, CDMX 04600</p>
+                  </div>
                </div>
-               <div>
-                  <i class="fas fa-swimmer"></i>
-                  <h3>SPORTS</h3>
-               </div>
-               <div>
-                  <i class="fas fa-gamepad"></i>
-                  <h3>GAMES</h3>
-               </div>
-               <div>
-                  <i class="fas fa-palette"></i>
-                  <h3>PAINT</h3>
-               </div>
-               <div>
-                  <i class="fas fa-plane-departure"></i>
-                  <h3>TRAVEL</h3>
-               </div>
-               <div>
-                  <i class="fas fa-headphones-alt"></i>
-                  <h3>MUSIC</h3>
-               </div>
-               <div>
-                  <i class="fas fa-robot"></i>
-                  <h3>TECH</h3>
-               </div>
-               <div>
-                  <i class="fas fa-motorcycle"></i>
-                  <h3>MOTOS</h3>
-               </div>
+               
             </div>
          </div>
+   
+            <div class="col-md-6 p-4">
+               <div class="infoCard text-center">
+
+                  <h2>MY INTERESTS</h2>
+                  <!-- INTEREST ICONS -->
+                  <div class="infoCards__interests">
+                     <div>
+                        <i class="fas fa-drum"></i>
+                        <h3>DRUMS</h3>
+                     </div>
+                     <div>
+                        <i class="fas fa-swimmer"></i>
+                        <h3>SPORTS</h3>
+                     </div>
+                     <div>
+                        <i class="fas fa-gamepad"></i>
+                        <h3>GAMES</h3>
+                     </div>
+                     <div>
+                        <i class="fas fa-palette"></i>
+                        <h3>PAINT</h3>
+                     </div>
+                     <div>
+                        <i class="fas fa-plane-departure"></i>
+                        <h3>TRAVEL</h3>
+                     </div>
+                     <div>
+                        <i class="fas fa-headphones-alt"></i>
+                        <h3>MUSIC</h3>
+                     </div>
+                     <div>
+                        <i class="fas fa-robot"></i>
+                        <h3>TECH</h3>
+                     </div>
+                     <div>
+                        <i class="fas fa-motorcycle"></i>
+                        <h3>MOTOS</h3>
+                     </div>
+                  </div>
+
+               </div>
+            </div>
+   
+          </div>
       </div>
 
       <!-- FOOTER -->
       <footer>
          <div class="footerContainer">
-            <a href="#navBar" class="upBtn">UP</a>
+            <a href="#navbarNav" class="upBtn">UP</a>
             <ul>
                <li><a href="https://www.facebook.com/jossdensmore"><i class="fab fa-facebook-f"></i></a></li>
                <li><a href="https://www.instagram.com/jossdensmore/"><i class="fab fa-instagram"></i></a></li>
@@ -136,6 +165,6 @@
       </footer>
 
    </main>
-   
+   <script src="bootstrap/bootstrap.bundle.js"></script>
 </body>
 </html>
