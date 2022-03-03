@@ -5,29 +5,46 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="icon" type="image/x-icon" href="../images/logo/favicon.png">
+   <!-- BOOTSTRAP -->
+   <link rel="stylesheet" href="../bootstrap/bootstrap.min.css">
+   <!-- ESTILOS -->
    <link rel="stylesheet" href="../css/style.css">
+   <!-- FONTAWESOME -->
    <script src="https://kit.fontawesome.com/040faf61ed.js" crossorigin="anonymous"></script>
    <title>Joss | Skills</title>
 </head>
 <body>
 
-   <main class="grid">
+   <main class="row">
 
-      <!-- MENU -->
-      <header id="navBar">
-         <nav class="navBar__container">
-            <a href="../index.html" class="navBar__Logo">JOSS</a>
-            <label for="show__menu" class="menu__icon"><span class="fas fa-bars"></span></label>
-            <input type="checkbox" id="show__menu">
-            <ul>
-               <li><a href="../index.html">Home</a></li>
-               <li><a href="#"><u>Skills</u></a></li>
-               <li><a href="resume.html">Resume</a></li>
-               <li><a href="portfolio.html">Portfolio</a></li>
-               <li><a href="contact.html">Contact</a></li>
-            </ul>
-         </nav>
-      </header>
+      <!-- MENU BOOTSTRAP -->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+         <div class="container">
+            <a class="navbar-brand navBar__Logo" href="../index.html">JOSS</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+               <ul class="navbar-nav">
+                  <li class="nav-item">
+                     <a class="nav-link" aria-current="page" href="../index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link active" href="#"><u>Skills</u></a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="resume.html">Resume</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="portfolio.html">Portfolio</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="contact.html">Contact</a>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </nav>
 
       <!-- SKILLS BANNER -->
       <div class="pagesBanner">
@@ -36,13 +53,13 @@
          </div>
       </div>
 
-      <div class="genContainer flexContainer flexWrap">
+      <div class="container d-flex flexWrap m-4">
          <!-- SKILLS IMG -->
-         <div class="width40">
+         <div class="col-md-5">
             <img src="../images/backgrounds/proof.jpg" alt="skills image" loading="lazy" class="hideOnMobile skills__img">
          </div>
          <!-- SKILLS -->
-         <div class="width60">
+         <div class="col-md-7">
             <h2>TECHNICAL SKILLS</h2>
             <div>
                <i></i>
@@ -104,6 +121,6 @@
       </footer>
 
    </main>
-
+   <script src="../bootstrap/bootstrap.bundle.js"></script>
 </body>
 </html>

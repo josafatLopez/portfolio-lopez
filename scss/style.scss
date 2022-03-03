@@ -1,0 +1,520 @@
+/* FONT FAMILY */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&display=swap');
+@import "colors.scss";
+
+/* RESET STYLES */
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Montserrat', sans-serif;
+}
+
+a {
+   text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+   color: $darkestBlue;
+}
+
+p {
+ color: $mediumGray;
+}
+ 
+button {
+   border: none;
+   cursor: pointer;
+}
+ 
+ul {
+   margin: 0;
+   margin-block-start: 0;
+   padding-inline-start: 0;
+}
+ 
+li {
+   list-style: none;
+}
+
+textarea {
+   resize: none;
+   border: .5px $mediumGray;
+   padding: .35rem .5rem;
+   outline: none;
+   font-family: Arial, Helvetica, sans-serif;
+}
+
+input {
+   border: none;
+   border-radius: 3px;
+   padding: .35rem .5rem;
+   font-family: Arial, Helvetica, sans-serif;
+}
+
+input:focus-visible {
+   outline: 1px solid $mediumGray;
+}
+
+select {
+   height: 28px;
+   outline: none;
+   border: none;
+}
+
+/* CONTAINERS */
+.grayContainer {
+   background-color: $lightGray;
+   grid-column: 1 / 13;
+   padding: 2rem 0;
+}
+
+.flexWrap {
+   flex-wrap: wrap;
+}
+
+/* TEXT PROPIERTIES */
+.whiteText {
+   color: #FFF;
+}
+
+/* BUTTON */
+.ghost__btn {
+   display: inline-block;
+   margin: 1rem 0;
+   color: #FFF;
+   padding: .5rem 2.25rem;
+   border: 1px solid #FFF;
+   box-shadow: inset 0 0 0 0 $blue;
+   transition: 0.5s;
+}
+
+.ghost__btn:hover {
+   color: #FFF;
+   border: 1px solid $blue;
+   box-shadow: inset 600px 0 0 0 $blue;
+}
+
+/* HR STYLES */
+.underLine{
+   width: 195px;
+   border: 2px solid $blue;
+   margin: .25rem auto;
+   display: flex;
+}
+
+/* DISPLAY STYLES */
+.hideOnMobile {
+   display: none;
+}
+
+/* NAVBAR MENÚ */
+#navBar {
+   display: grid;
+   grid-template-columns: repeat(12, 1fr);
+   grid-column: 1 / 13;
+   column-gap: 10px;
+   height: 60px;
+   background: rgb(25,29,32);
+   background: linear-gradient(90deg, rgba(25,29,32,1) 0%, rgba(48,48,48,1) 100%);
+   margin-bottom: -1px;
+}
+
+#navbarNav a {
+   transition: .5s;
+}
+
+#navbarNav a:hover {
+   color: $mediumBlue;
+}
+
+.navBar__Logo {
+   font-weight: 600;
+   font-size: 30px;
+}
+
+.menu__icon {
+   font-size: 25px;
+   color: #FFF;
+   cursor: pointer;
+}
+
+/* HOME BANNER */
+.homeBanner {
+   height: 440px;
+   background-image: url("../images/backgrounds/home-banner.jpg");
+   background-size: cover;
+   background-color: #1e2326d7;
+   background-blend-mode: color;
+   background-attachment: fixed;
+   background-position-y: -7.5rem;
+   grid-column: 1 / 13;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.homeBanner__container {
+   grid-column: 2 / 12;
+   text-align: center;
+   color: #FFF;
+}
+
+.homeBanner__img {
+   width: 185px;
+   border-radius: 185px;
+   border: 3px solid #FFF;
+   margin-bottom: 1.5rem;
+   box-shadow: 5px 5px 15px $darkestGray;
+}
+
+/* PAGES BANNER */
+.pagesBanner {
+   height: 200px;
+   background-image: url("../images/backgrounds/small-banner.jpeg");
+   background-size: cover;
+   background-color: #1e2326d7;
+   background-blend-mode: color;
+   background-attachment: fixed;
+   grid-column: 1 / 13;
+   background-position-y: -7.5rem;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.pagesBanner__container {
+   text-align: center;
+   color: #FFF;
+}
+
+/* PERSONAL INFO */
+
+.infoCard {
+   background: $lightGray;
+   padding: 1.5rem;
+   border-radius: 15px;
+}
+
+.infoCards__personal, .infoCards__interests {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-around;
+}
+
+.infoCards__personal div {
+   margin-top: 1.5rem;
+   width: 48%;
+   line-height: 1.5;
+}
+
+.infoCards__personal div .fas {
+   font-size: 30px;
+   color: $blue;
+}
+
+.infoCards__personal p {
+   font-size: 11px;
+}
+
+.infoCards__interests div {
+   margin: 2rem 0 0;
+   padding: 1.2rem 0;
+   width: 45%;
+   background-color: #FFF;
+   border-radius: 10px;
+   line-height: 1.75;
+}
+
+.infoCards__interests div .fas{
+   color: $darkestBlue;
+   font-size: 40px;
+}
+
+/* FOOTER */
+footer {
+   display: grid;
+   grid-template-columns: repeat(12, 1fr);
+   grid-column: 1 / 13;
+   background: rgb(25,29,32);
+   background: linear-gradient(90deg, rgba(25,29,32,1) 0%, rgba(48,48,48,1) 100%);
+}
+
+.footerContainer {
+   text-align: center;
+   color: #FFF;
+   padding: 0 0 1.75rem;
+   grid-column: 2 / 12;
+}
+
+.footerContainer ul {
+   display: flex;
+   justify-content: center;
+}
+
+.footerContainer ul li {
+   margin: 0 .25rem 1rem;
+}
+
+.upBtn {
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   width: 45px;
+   height: 45px;
+   border-radius: 45px;
+   background-color: $blue;
+   color: #FFF;
+   font-size: 16px;
+   font-weight: 600;
+   transition: .5s;
+   position: relative;
+   top: -22px;
+}
+
+.upBtn:hover {
+   color: #FFF;
+   background-color: $heavyBlue;
+}
+
+footer .fab {
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   width: 35px;
+   height: 35px;
+   border-radius: 35px;
+   border: 1px solid #FFF;
+   color: #FFF;
+   transition: .5s;
+}
+
+footer .fab:hover {
+   background-color: $blue;
+   border: 1px solid $blue;
+}
+
+/* PORTFOLIO STYLES */
+
+.portfolioCards {
+   width: 100%;
+}
+
+.portfolioCards div {
+   background-color: $lightBlue;
+   width: 200px;
+   height: 200px;
+   margin: 0 .75rem 1.75rem;
+}
+
+/* SKILLS STYLES */ 
+.skills__img {
+   padding-right: 1.5rem;
+   width: 100%;
+}
+
+/* RESUME STYLES */
+.resume__cards h2 {
+   margin-bottom: 1.5rem;
+}
+
+.resume__cards div {
+   box-shadow: 0px 0px 15px #1e23261e;
+   margin-bottom: 1.5rem;
+   border-radius: 10px;
+   padding: 1.5rem;
+   text-align: left;
+}
+
+.resume__cards div span {
+   color: $blue;
+}
+
+.resume__cards div h5 {
+   color: $darkBlue;
+   margin: .25rem 0;
+}
+
+/* CONTACT STYLES */
+.contactForm, .contactMap {
+   width: 90%;
+   margin: 0 auto;
+}
+
+.contactMap iframe {
+   width: 100%;
+   height: 325px;
+   padding-top: 2rem;
+}
+
+.contactForm input, textarea {
+   width: 100%;
+   padding: .75rem .5rem;
+   box-shadow: 0px 0px 15px #1e23260a;
+   margin: .5rem 0;
+}
+
+.contactForm textarea {
+   height: 150px;
+}
+
+.contactForm input::placeholder, textarea::placeholder {
+   color: $darkBlue;
+}
+
+.btn__blue {
+   background: $blue;
+   color: #FFF;
+   padding: 1rem;
+   transition: .3s;
+}
+
+.btn__blue:hover {
+   background: $heavyBlue;
+   color: #FFF;
+}
+
+/* RESPONSIVE */
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+ 
+   .contactForm, .contactMap {
+      width: 75%;
+   }
+
+   .resume__cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+   }
+
+   .resume__cards h2 {
+      width: 100%;
+   }
+
+   .resume__cards div {
+      width: 47.5%;
+   }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+
+   .infoCards__personal div {
+      width: 48%;
+      border-radius: 10px;
+      padding: 1.1rem .75rem;
+      background-color: #FFF;
+   }
+
+   .infoCards__interests div {
+      width: 22.5%;
+   }
+
+   .infoCards__interests div .fas {
+      font-size: 30px;
+   }
+
+   .infoCards__interests div h3 {
+      font-size: 13.5px;
+   }
+
+   .contactForm, .contactMap {
+      width: 55%;
+   }
+
+   .resume__cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+   }
+
+   .resume__cards h2 {
+      width: 100%;
+   }
+
+   .resume__cards div {
+      width: 47.5%;
+   }
+}
+
+@media only screen and (min-width: 1024px) {
+
+   .menu__icon {
+      display: none;
+   }
+
+   #navBar ul {
+      display: flex;
+      position: unset;
+      background-color: transparent;
+      width: auto;
+   }
+
+   #navBar ul li {
+      margin-left: 1.5rem;
+   }
+
+   .w50__desktop {
+      width: 47.5%;
+   }
+
+   .infoCards__personal div {
+      width: 46%;
+      border-radius: 10px;
+      padding: 1.1rem .75rem;
+      background-color: #FFF;
+   }
+
+   .infoCards__interests div {
+      width: 22.5%;
+   }
+
+   .infoCards__personal div, .infoCards__interests div {
+      transition: .3s ease-in-out;
+   }
+
+   .infoCards__personal div:hover, .infoCards__interests div:hover {
+      box-shadow: 0px 0px 15px #1e23261e;
+   }
+
+   .grayContainer {
+      padding: 2.5rem;
+   }
+
+   .contactForm, .contactMap {
+      width: 47.5%;
+   }
+
+   .hideOnMobile {
+      display: block;
+   }
+
+   .contactMap iframe {
+      height: 95%;
+   }
+}
+
+/* BOOTSTRAP RESET */
+
+.navbar-dark .navbar-toggler {
+   border: none;
+}
+
+.navbar-toggler:focus {
+   box-shadow: none;
+}
+
+p {
+   margin: 0;
+}
+
+.row {
+   margin: 0;
+}
+
+.row>* {
+   padding: 0;
+}
+
+.m-4 {
+   margin: 2.5rem 0!important;
+}
