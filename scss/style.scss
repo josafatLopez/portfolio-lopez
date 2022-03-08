@@ -78,6 +78,20 @@ select {
    color: #FFF;
 }
 
+.textFadeIn {
+   animation-duration: 3s;
+   animation-name: textFadeIn;
+}
+
+@keyframes textFadeIn {
+   from {
+       opacity: 0;
+   }
+   to {
+       opacity: 1;
+   }
+}
+
 /* BUTTON */
 .ghost__btn {
    display: inline-block;
@@ -311,6 +325,20 @@ footer .fab:hover {
 .skills__img {
    padding-right: 1.5rem;
    width: 100%;
+   height: 630px;
+   object-fit: contain;
+   position: sticky;
+   top: 2.25rem;
+}
+
+.techSkills .skillCard {
+   display: flex;
+}
+
+.techSkills div img {
+   width: 50px;
+   height: 50px;
+   margin: 0rem 1rem 1rem 0rem;
 }
 
 /* RESUME STYLES */
@@ -333,6 +361,10 @@ footer .fab:hover {
 .resume__cards div h5 {
    color: $darkBlue;
    margin: .25rem 0;
+}
+
+.resume__cards div p strong {
+   color: $blue;
 }
 
 /* CONTACT STYLES */
@@ -517,4 +549,8 @@ p {
 
 .m-4 {
    margin: 2.5rem 0!important;
+}
+
+.progress-bar {
+   background-color: $blue;
 }

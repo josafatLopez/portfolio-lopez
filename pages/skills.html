@@ -19,7 +19,7 @@
 
       <!-- MENU BOOTSTRAP -->
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-         <div class="container">
+         <div class="container" id="top">
             <a class="navbar-brand navBar__Logo" href="../index.html">JOSS</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                <span class="navbar-toggler-icon"></span>
@@ -49,67 +49,203 @@
       <!-- SKILLS BANNER -->
       <div class="pagesBanner">
          <div class="pagesBanner__container">
-            <h1 class="whiteText">Hi, I'm Skills</h1>
+            <h1 class="whiteText textFadeIn">Hi, I'm Skills</h1>
          </div>
       </div>
 
-      <div class="container d-flex flexWrap m-4">
-         <!-- SKILLS IMG -->
-         <div class="col-md-5">
-            <img src="../images/backgrounds/proof.jpg" alt="skills image" loading="lazy" class="hideOnMobile skills__img">
-         </div>
-         <!-- SKILLS -->
-         <div class="col-md-7">
-            <h2>TECHNICAL SKILLS</h2>
-            <div>
-               <i></i>
-               <h4>Lorem Ipsum</h4>
-               <h4>000%</h4>
+      <div class="container m-4">
+         <div class="d-flex flexWrap justify-content-center">
+            <!-- SKILLS IMG -->
+            <div class="col-md-5 hideOnMobile">
+               <img src="../images/lateralSkills.jpg" alt="skills image" loading="lazy" class="skills__img">
             </div>
-            <div>
-               <i></i>
-               <h4>Lorem Ipsum</h4>
-               <h4>000%</h4>
+            <!-- SKILLS -->
+            <div class="col-md-7 techSkills">
+               <!-- TECHNICAL SKILLS -->
+               <h2>TECHNICAL SKILLS</h2><br>
+               <div class="skillCard">
+                  <img src="../images/icons/skills/skill-01.png" alt="Adobe Illustrator Icon">
+                  <div class="col-7">
+                     <h4>Adobe Illustrator</h4>
+                     <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                     </div>
+                  </div>
+                  <h4 class="p-3">90%</h4>
+               </div>
+               <div class="skillCard">
+                  <img src="../images/icons/skills/skill-03.png" alt="Adobe Xd Icon">
+                  <div class="col-7">
+                     <h4>Adobe Xd</h4>
+                     <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                     </div>
+                  </div>
+                  <h4 class="p-3">90%</h4>
+               </div>
+               <div class="skillCard">
+                  <img src="../images/icons/skills/skill-02.png" alt="Adobe Photoshop Icon">
+                  <div class="col-7">
+                     <h4>Adobe Photoshp</h4>
+                     <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                     </div>
+                  </div>
+                  <h4 class="p-3">75%</h4>
+               </div>
+               <div class="skillCard">
+                  <img src="../images/icons/skills/skill-04.png" alt="Adobe InDesign Icon">
+                  <div class="col-7">
+                     <h4>Adobe InDesign</h4>
+                     <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                     </div>
+                  </div>
+                  <h4 class="p-3">70%</h4>
+               </div>
+               <div class="skillCard">
+                  <img src="../images/icons/skills/skill-05.png" alt="HTML5 Icon">
+                  <div class="col-7">
+                     <h4>HTML5</h4>
+                     <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                     </div>
+                  </div>
+                  <h4 class="p-3">90%</h4>
+               </div>
+               <div class="skillCard">
+                  <img src="../images/icons/skills/skill-06.png" alt="CSS3 Icon">
+                  <div class="col-7">
+                     <h4>CSS3</h4>
+                     <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                     </div>
+                  </div>
+                  <h4 class="p-3">90%</h4>
+               </div>
+               <div class="skillCard">
+                  <img src="../images/icons/skills/skill-07.png" alt="Sass Icon">
+                  <div class="col-7">
+                     <h4>Sass</h4>
+                     <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                     </div>
+                  </div>
+                  <h4 class="p-3">80%</h4>
+               </div>
+               <div class="skillCard">
+                  <img src="../images/icons/skills/skill-08.png" alt="Bootstrap Icon">
+                  <div class="col-7">
+                     <h4>Bootstrap</h4>
+                     <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                     </div>
+                  </div>
+                  <h4 class="p-3">85%</h4>
+               </div>
+               <div class="skillCard">
+                  <img src="../images/icons/skills/skill-09.png" alt="JavaScript Icon">
+                  <div class="col-7">
+                     <h4>JavaScript</h4>
+                     <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                     </div>
+                  </div>
+                  <h4 class="p-3">50%</h4>
+               </div>
+               <div class="skillCard">
+                  <img src="../images/icons/skills/skill-10.png" alt="React JS Icon">
+                  <div class="col-7">
+                     <h4>React JS</h4>
+                     <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                     </div>
+                  </div>
+                  <h4 class="p-3">50%</h4>
+               </div>
+               <div class="skillCard">
+                  <img src="../images/icons/skills/skill-11.png" alt="Jira Software Icon">
+                  <div class="col-7">
+                     <h4>Jira Software</h4>
+                     <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                     </div>
+                  </div>
+                  <h4 class="p-3">75%</h4>
+               </div>
+
+               <br>
+               <!-- PROFESSIONAL SKILLS -->
+               <h2>PROFESSIONAL SKILLS</h2>
+               <div class="skillCard">
+                  <img src="../images/icons/skills/skill-12.png" alt="React JS Icon">
+                  <div class="col-7">
+                     <h4>Project Management</h4>
+                     <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                     </div>
+                  </div>
+                  <h4 class="p-3">75%</h4>
+               </div>
+               <div class="skillCard">
+                  <img src="../images/icons/skills/skill-13.png" alt="React JS Icon">
+                  <div class="col-7">
+                     <h4>Conflict Resolution</h4>
+                     <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                     </div>
+                  </div>
+                  <h4 class="p-3">80%</h4>
+               </div>
+               <div class="skillCard">
+                  <img src="../images/icons/skills/skill-14.png" alt="React JS Icon">
+                  <div class="col-7">
+                     <h4>Agile</h4>
+                     <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                     </div>
+                  </div>
+                  <h4 class="p-3">80%</h4>
+               </div>
+               <div class="skillCard">
+                  <img src="../images/icons/skills/skill-15.png" alt="React JS Icon">
+                  <div class="col-7">
+                     <h4>Communication</h4>
+                     <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                     </div>
+                  </div>
+                  <h4 class="p-3">90%</h4>
+               </div>
+               <div class="skillCard">
+                  <img src="../images/icons/skills/skill-16.png" alt="React JS Icon">
+                  <div class="col-7">
+                     <h4>Teamwork</h4>
+                     <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                     </div>
+                  </div>
+                  <h4 class="p-3">85%</h4>
+               </div>
+               <div class="skillCard">
+                  <img src="../images/icons/skills/skill-17.png" alt="React JS Icon">
+                  <div class="col-7">
+                     <h4>Creativity</h4>
+                     <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                     </div>
+                  </div>
+                  <h4 class="p-3">90%</h4>
+               </div>
             </div>
-            <div>
-               <i></i>
-               <h4>Lorem Ipsum</h4>
-               <h4>000%</h4>
-            </div>
-            <div>
-               <i></i>
-               <h4>Lorem Ipsum</h4>
-               <h4>000%</h4>
-            </div>
-   
-            <h2>PROFESSIONAL SKILLS</h2>
-            <div>
-               <i></i>
-               <h4>Lorem Ipsum</h4>
-               <h4>000%</h4>
-            </div>
-            <div>
-               <i></i>
-               <h4>Lorem Ipsum</h4>
-               <h4>000%</h4>
-            </div>
-            <div>
-               <i></i>
-               <h4>Lorem Ipsum</h4>
-               <h4>000%</h4>
-            </div>
-            <div>
-               <i></i>
-               <h4>Lorem Ipsum</h4>
-               <h4>000%</h4>
-            </div>
+
          </div>
       </div>
 
       <!-- FOOTER -->
       <footer>
          <div class="footerContainer">
-            <a href="#navBar" class="upBtn">UP</a>
+            <a href="#top" class="upBtn">UP</a>
             <ul>
                <li><a href="https://www.facebook.com/jossdensmore"><i class="fab fa-facebook-f"></i></a></li>
                <li><a href="https://www.instagram.com/jossdensmore/"><i class="fab fa-instagram"></i></a></li>
