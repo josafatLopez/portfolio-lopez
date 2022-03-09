@@ -101,12 +101,11 @@ select {
    border: 1px solid #FFF;
    box-shadow: inset 0 0 0 0 $blue;
    transition: 0.5s;
-}
-
-.ghost__btn:hover {
-   color: #FFF;
-   border: 1px solid $blue;
-   box-shadow: inset 600px 0 0 0 $blue;
+   &:hover {
+      color: #FFF;
+      border: 1px solid $blue;
+      box-shadow: inset 600px 0 0 0 $blue;
+   }
 }
 
 /* HR STYLES */
@@ -132,10 +131,9 @@ select {
    background: rgb(25,29,32);
    background: linear-gradient(90deg, rgba(25,29,32,1) 0%, rgba(48,48,48,1) 100%);
    margin-bottom: -1px;
-}
-
-#navbarNav a {
-   transition: .5s;
+   a {
+      transition: .5s;
+   }
 }
 
 #navbarNav a:hover {
@@ -216,19 +214,19 @@ select {
    justify-content: space-around;
 }
 
-.infoCards__personal div {
-   margin-top: 1.5rem;
-   width: 48%;
-   line-height: 1.5;
-}
-
-.infoCards__personal div .fas {
-   font-size: 30px;
-   color: $blue;
-}
-
-.infoCards__personal p {
-   font-size: 11px;
+.infoCards__personal {
+   div {
+      margin-top: 1.5rem;
+      width: 48%;
+      line-height: 1.5;
+      .fas {
+         font-size: 30px;
+         color: $blue;
+      }
+   }
+   p {
+      font-size: 11px;
+   }
 }
 
 .infoCards__interests div {
@@ -238,11 +236,10 @@ select {
    background-color: #FFF;
    border-radius: 10px;
    line-height: 1.75;
-}
-
-.infoCards__interests div .fas{
-   color: $darkestBlue;
-   font-size: 40px;
+   .fas {
+      color: $darkestBlue;
+      font-size: 40px;
+   }
 }
 
 /* FOOTER */
@@ -252,6 +249,21 @@ footer {
    grid-column: 1 / 13;
    background: rgb(25,29,32);
    background: linear-gradient(90deg, rgba(25,29,32,1) 0%, rgba(48,48,48,1) 100%);
+   .fab {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 35px;
+      height: 35px;
+      border-radius: 35px;
+      border: 1px solid #FFF;
+      color: #FFF;
+      transition: .5s;
+      &:hover {
+         background-color: $blue;
+         border: 1px solid $blue;
+      }
+   }
 }
 
 .footerContainer {
@@ -259,15 +271,13 @@ footer {
    color: #FFF;
    padding: 0 0 1.75rem;
    grid-column: 2 / 12;
-}
-
-.footerContainer ul {
-   display: flex;
-   justify-content: center;
-}
-
-.footerContainer ul li {
-   margin: 0 .25rem 1rem;
+   ul {
+      display: flex;
+      justify-content: center;
+      li {
+         margin: 0 .25rem 1rem;
+      }
+   }
 }
 
 .upBtn {
@@ -284,41 +294,22 @@ footer {
    transition: .5s;
    position: relative;
    top: -22px;
-}
-
-.upBtn:hover {
-   color: #FFF;
-   background-color: $heavyBlue;
-}
-
-footer .fab {
-   display: inline-flex;
-   align-items: center;
-   justify-content: center;
-   width: 35px;
-   height: 35px;
-   border-radius: 35px;
-   border: 1px solid #FFF;
-   color: #FFF;
-   transition: .5s;
-}
-
-footer .fab:hover {
-   background-color: $blue;
-   border: 1px solid $blue;
+   &:hover {
+      color: #FFF;
+      background-color: $heavyBlue;
+   }
 }
 
 /* PORTFOLIO STYLES */
 
 .portfolioCards {
    width: 100%;
-}
-
-.portfolioCards div {
-   background-color: $lightBlue;
-   width: 200px;
-   height: 200px;
-   margin: 0 .75rem 1.75rem;
+   div {
+      background-color: $lightBlue;
+      width: 200px;
+      height: 200px;
+      margin: 0 .75rem 1.75rem;
+   }
 }
 
 /* SKILLS STYLES */ 
@@ -331,40 +322,43 @@ footer .fab:hover {
    top: 2.25rem;
 }
 
-.techSkills .skillCard {
-   display: flex;
-}
-
-.techSkills div img {
-   width: 50px;
-   height: 50px;
-   margin: 0rem 1rem 1rem 0rem;
+.techSkills {
+   .skillCard {
+      display: flex;
+   }
+   div {
+      img {
+         width: 50px;
+         height: 50px;
+         margin: 0rem 1rem 1rem 0rem;
+      }
+   }
 }
 
 /* RESUME STYLES */
-.resume__cards h2 {
-   margin-bottom: 1.5rem;
-}
-
-.resume__cards div {
-   box-shadow: 0px 0px 15px #1e23261e;
-   margin-bottom: 1.5rem;
-   border-radius: 10px;
-   padding: 1.5rem;
-   text-align: left;
-}
-
-.resume__cards div span {
-   color: $blue;
-}
-
-.resume__cards div h5 {
-   color: $darkBlue;
-   margin: .25rem 0;
-}
-
-.resume__cards div p strong {
-   color: $blue;
+.resume__cards {
+   h2 {
+      margin-bottom: 1.5rem;
+   }
+   div {
+      box-shadow: 0px 0px 15px #1e23261e;
+      margin-bottom: 1.5rem;
+      border-radius: 10px;
+      padding: 1.5rem;
+      text-align: left;
+      span {
+         color: $blue;
+      }
+      h5 {
+         color: $darkBlue;
+         margin: .25rem 0;
+      }
+      p {
+         strong {
+            color: $blue;
+         }
+      }
+   }
 }
 
 /* CONTACT STYLES */
@@ -373,10 +367,12 @@ footer .fab:hover {
    margin: 0 auto;
 }
 
-.contactMap iframe {
-   width: 100%;
-   height: 325px;
-   padding-top: 2rem;
+.contactMap  {
+   iframe {
+      width: 100%;
+      height: 325px;
+      padding-top: 2rem;
+   }
 }
 
 .contactForm input, textarea {
@@ -399,11 +395,10 @@ footer .fab:hover {
    color: #FFF;
    padding: 1rem;
    transition: .3s;
-}
-
-.btn__blue:hover {
-   background: $heavyBlue;
-   color: #FFF;
+   &:hover {
+      background: $heavyBlue;
+      color: #FFF;
+   }
 }
 
 /* RESPONSIVE */
@@ -417,14 +412,12 @@ footer .fab:hover {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-   }
-
-   .resume__cards h2 {
-      width: 100%;
-   }
-
-   .resume__cards div {
-      width: 47.5%;
+      h2 {
+         width: 100%;
+      }
+      div {
+         width: 47.5%;
+      }
    }
 }
 
@@ -435,18 +428,16 @@ footer .fab:hover {
       border-radius: 10px;
       padding: 1.1rem .75rem;
       background-color: #FFF;
+      .fas {
+         font-size: 30px;
+      }
+      h3 {
+         font-size: 13.5px;
+      }
    }
 
    .infoCards__interests div {
       width: 22.5%;
-   }
-
-   .infoCards__interests div .fas {
-      font-size: 30px;
-   }
-
-   .infoCards__interests div h3 {
-      font-size: 13.5px;
    }
 
    .contactForm, .contactMap {
@@ -457,14 +448,12 @@ footer .fab:hover {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-   }
-
-   .resume__cards h2 {
-      width: 100%;
-   }
-
-   .resume__cards div {
-      width: 47.5%;
+      h2 {
+         width: 100%;
+      }
+      div {
+         width: 47.5%;
+      }
    }
 }
 
@@ -479,10 +468,9 @@ footer .fab:hover {
       position: unset;
       background-color: transparent;
       width: auto;
-   }
-
-   #navBar ul li {
-      margin-left: 1.5rem;
+      li {
+         margin-left: 1.5rem;
+      }
    }
 
    .w50__desktop {
@@ -502,10 +490,9 @@ footer .fab:hover {
 
    .infoCards__personal div, .infoCards__interests div {
       transition: .3s ease-in-out;
-   }
-
-   .infoCards__personal div:hover, .infoCards__interests div:hover {
-      box-shadow: 0px 0px 15px #1e23261e;
+      &:hover {
+         box-shadow: 0px 0px 15px #1e23261e;
+      }
    }
 
    .grayContainer {
