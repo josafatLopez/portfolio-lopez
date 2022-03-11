@@ -50,6 +50,8 @@ select {
   outline: none;
   border: none; }
 
+/* MAP GET FOR COMMON STYLES */
+/* MIXINS WHIT PARAMETERS */
 /* CONTAINERS */
 .grayContainer {
   background-color: #F6F6F6;
@@ -173,30 +175,30 @@ select {
   padding: 1.5rem;
   border-radius: 15px; }
 
-.infoCards__personal, .infoCards__interests {
+.infoCards, .infoCards--personal, .infoCards--interests {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around; }
 
-.infoCards__personal div {
+.infoCards--personal div {
   margin-top: 1.5rem;
   width: 48%;
   line-height: 1.5; }
-  .infoCards__personal div .fas {
+  .infoCards--personal div .fas {
     font-size: 30px;
     color: #79C6F7; }
 
-.infoCards__personal p {
+.infoCards--personal p {
   font-size: 11px; }
 
-.infoCards__interests div {
+.infoCards--interests div {
   margin: 2rem 0 0;
   padding: 1.2rem 0;
   width: 45%;
   background-color: #FFF;
   border-radius: 10px;
   line-height: 1.75; }
-  .infoCards__interests div .fas {
+  .infoCards--interests div .fas {
     color: #385D75;
     font-size: 40px; }
 
@@ -251,6 +253,38 @@ footer {
     background-color: #24AAFF; }
 
 /* PORTFOLIO STYLES */
+.btn--all {
+  background-color: #5D6C75;
+  color: #FFF;
+  padding: .5rem 2rem;
+  transition: .3s; }
+  .btn--all:hover {
+    background-color: #385D75; }
+
+.btn--webDesign {
+  background-color: #9AB1C2;
+  color: #FFF;
+  padding: .5rem 2rem;
+  transition: .3s; }
+  .btn--webDesign:hover {
+    background-color: #385D75; }
+
+.btn--design {
+  background-color: #AECADB;
+  color: #FFF;
+  padding: .5rem 2rem;
+  transition: .3s; }
+  .btn--design:hover {
+    background-color: #385D75; }
+
+.btn--painting {
+  background-color: #C1E1F5;
+  color: #FFF;
+  padding: .5rem 2rem;
+  transition: .3s; }
+  .btn--painting:hover {
+    background-color: #385D75; }
+
 .portfolioCards {
   width: 100%; }
   .portfolioCards div {
@@ -339,16 +373,16 @@ footer {
       width: 47.5%; } }
 
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
-  .infoCards__personal div {
+  .infoCards--personal div {
     width: 48%;
     border-radius: 10px;
     padding: 1.1rem .75rem;
     background-color: #FFF; }
-    .infoCards__personal div .fas {
+    .infoCards--personal div .fas {
       font-size: 30px; }
-    .infoCards__personal div h3 {
+    .infoCards--personal div h3 {
       font-size: 13.5px; }
-  .infoCards__interests div {
+  .infoCards--interests div {
     width: 22.5%; }
   .contactForm, .contactMap {
     width: 55%; }
@@ -373,16 +407,16 @@ footer {
       margin-left: 1.5rem; }
   .w50__desktop {
     width: 47.5%; }
-  .infoCards__personal div {
+  .infoCards--personal div {
     width: 46%;
     border-radius: 10px;
     padding: 1.1rem .75rem;
     background-color: #FFF; }
-  .infoCards__interests div {
+  .infoCards--interests div {
     width: 22.5%; }
-  .infoCards__personal div, .infoCards__interests div {
+  .infoCards--personal div, .infoCards--interests div {
     transition: .3s ease-in-out; }
-    .infoCards__personal div:hover, .infoCards__interests div:hover {
+    .infoCards--personal div:hover, .infoCards--interests div:hover {
       box-shadow: 0px 0px 15px #1e23261e; }
   .grayContainer {
     padding: 2.5rem; }

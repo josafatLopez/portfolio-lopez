@@ -19,7 +19,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 p {
- color: $mediumGray;
+   color: $mediumGray;
 }
  
 button {
@@ -60,6 +60,20 @@ select {
    height: 28px;
    outline: none;
    border: none;
+}
+
+/* MAP GET FOR COMMON STYLES */
+$commonStyles: (
+  borderRadius: 10px,
+  textCenter: center,
+  alignCenter: center,
+  justifyCenter: center,
+);
+
+/* MIXINS WHIT PARAMETERS */
+@mixin sizes($width, $height){
+   width: $width;
+   height: $height;
 }
 
 /* CONTAINERS */
@@ -162,13 +176,13 @@ select {
    background-position-y: -7.5rem;
    grid-column: 1 / 13;
    display: flex;
-   align-items: center;
-   justify-content: center;
+   align-items:map-get($commonStyles, alignCenter);
+   justify-content:map-get($commonStyles, justifyCenter);
 }
 
 .homeBanner__container {
    grid-column: 2 / 12;
-   text-align: center;
+   text-align:map-get($commonStyles, textCenter);
    color: #FFF;
 }
 
@@ -191,12 +205,12 @@ select {
    grid-column: 1 / 13;
    background-position-y: -7.5rem;
    display: flex;
-   justify-content: center;
-   align-items: center;
+   justify-content:map-get($commonStyles, justifyCenter);
+   align-items:map-get($commonStyles, alignCenter);
 }
 
 .pagesBanner__container {
-   text-align: center;
+   text-align:map-get($commonStyles, textCenter);
    color: #FFF;
 }
 
@@ -208,13 +222,14 @@ select {
    border-radius: 15px;
 }
 
-.infoCards__personal, .infoCards__interests {
+.infoCards {
    display: flex;
    flex-wrap: wrap;
    justify-content: space-around;
 }
 
-.infoCards__personal {
+.infoCards--personal {
+   @extend .infoCards;
    div {
       margin-top: 1.5rem;
       width: 48%;
@@ -229,16 +244,19 @@ select {
    }
 }
 
-.infoCards__interests div {
-   margin: 2rem 0 0;
-   padding: 1.2rem 0;
-   width: 45%;
-   background-color: #FFF;
-   border-radius: 10px;
-   line-height: 1.75;
-   .fas {
-      color: $darkestBlue;
-      font-size: 40px;
+.infoCards--interests {
+   @extend .infoCards;
+   div {
+      margin: 2rem 0 0;
+      padding: 1.2rem 0;
+      width: 45%;
+      background-color: #FFF;
+      border-radius: map-get($commonStyles, borderRadius);
+      line-height: 1.75;
+      .fas {
+         color: $darkestBlue;
+         font-size: 40px;
+      }
    }
 }
 
@@ -251,10 +269,9 @@ footer {
    background: linear-gradient(90deg, rgba(25,29,32,1) 0%, rgba(48,48,48,1) 100%);
    .fab {
       display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 35px;
-      height: 35px;
+      align-items:map-get($commonStyles, alignCenter);
+      justify-content:map-get($commonStyles, justifyCenter);
+      @include sizes(35px, 35px);
       border-radius: 35px;
       border: 1px solid #FFF;
       color: #FFF;
@@ -267,13 +284,13 @@ footer {
 }
 
 .footerContainer {
-   text-align: center;
+   text-align:map-get($commonStyles, textCenter);
    color: #FFF;
    padding: 0 0 1.75rem;
    grid-column: 2 / 12;
    ul {
       display: flex;
-      justify-content: center;
+      justify-content:map-get($commonStyles, justifyCenter);
       li {
          margin: 0 .25rem 1rem;
       }
@@ -282,10 +299,9 @@ footer {
 
 .upBtn {
    display: inline-flex;
-   align-items: center;
-   justify-content: center;
-   width: 45px;
-   height: 45px;
+   align-items:map-get($commonStyles, alignCenter);
+   justify-content:map-get($commonStyles, justifyCenter);
+   @include sizes(45px, 45px);
    border-radius: 45px;
    background-color: $blue;
    color: #FFF;
@@ -302,12 +318,30 @@ footer {
 
 /* PORTFOLIO STYLES */
 
+$portfolioBtn: (
+   all: $blueGray,
+   webDesign: $darkBlue,
+   design: $mediumBlue,
+   painting: $lightBlue
+); 
+
+@each $btn, $color in $portfolioBtn {
+   .btn--#{$btn} {
+      background-color: $color;
+      color: #FFF;
+      padding: .5rem 2rem;
+      transition: .3s;
+      &:hover {
+         background-color: $darkestBlue;
+      }
+   }
+}
+
 .portfolioCards {
    width: 100%;
    div {
       background-color: $lightBlue;
-      width: 200px;
-      height: 200px;
+      @include sizes(200px, 200px);
       margin: 0 .75rem 1.75rem;
    }
 }
@@ -315,8 +349,7 @@ footer {
 /* SKILLS STYLES */ 
 .skills__img {
    padding-right: 1.5rem;
-   width: 100%;
-   height: 630px;
+   @include sizes(100%, 630px);
    object-fit: contain;
    position: sticky;
    top: 2.25rem;
@@ -328,8 +361,7 @@ footer {
    }
    div {
       img {
-         width: 50px;
-         height: 50px;
+         @include sizes(50px, 50px);
          margin: 0rem 1rem 1rem 0rem;
       }
    }
@@ -343,7 +375,7 @@ footer {
    div {
       box-shadow: 0px 0px 15px #1e23261e;
       margin-bottom: 1.5rem;
-      border-radius: 10px;
+      border-radius: map-get($commonStyles, borderRadius);
       padding: 1.5rem;
       text-align: left;
       span {
@@ -369,8 +401,7 @@ footer {
 
 .contactMap  {
    iframe {
-      width: 100%;
-      height: 325px;
+      @include sizes(100%, 325px);
       padding-top: 2rem;
    }
 }
@@ -423,9 +454,9 @@ footer {
 
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
 
-   .infoCards__personal div {
+   .infoCards--personal div {
       width: 48%;
-      border-radius: 10px;
+      border-radius: map-get($commonStyles, borderRadius);
       padding: 1.1rem .75rem;
       background-color: #FFF;
       .fas {
@@ -436,7 +467,7 @@ footer {
       }
    }
 
-   .infoCards__interests div {
+   .infoCards--interests div {
       width: 22.5%;
    }
 
@@ -477,18 +508,18 @@ footer {
       width: 47.5%;
    }
 
-   .infoCards__personal div {
+   .infoCards--personal div {
       width: 46%;
-      border-radius: 10px;
+      border-radius: map-get($commonStyles, borderRadius);
       padding: 1.1rem .75rem;
       background-color: #FFF;
    }
 
-   .infoCards__interests div {
+   .infoCards--interests div {
       width: 22.5%;
    }
 
-   .infoCards__personal div, .infoCards__interests div {
+   .infoCards--personal div, .infoCards--interests div {
       transition: .3s ease-in-out;
       &:hover {
          box-shadow: 0px 0px 15px #1e23261e;
