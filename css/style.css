@@ -254,44 +254,64 @@ footer {
 
 /* PORTFOLIO STYLES */
 .btn--all {
-  background-color: #5D6C75;
+  background-color: #5D6C75 !important;
   color: #FFF;
   padding: .5rem 2rem;
-  transition: .3s; }
+  margin: 5px;
+  transition: .3s;
+  display: inline-flex;
+  cursor: pointer; }
   .btn--all:hover {
-    background-color: #385D75; }
+    color: #FFF;
+    background-color: #385D75 !important; }
 
 .btn--webDesign {
-  background-color: #9AB1C2;
+  background-color: #9AB1C2 !important;
   color: #FFF;
   padding: .5rem 2rem;
-  transition: .3s; }
+  margin: 5px;
+  transition: .3s;
+  display: inline-flex;
+  cursor: pointer; }
   .btn--webDesign:hover {
-    background-color: #385D75; }
+    color: #FFF;
+    background-color: #385D75 !important; }
 
 .btn--design {
-  background-color: #AECADB;
+  background-color: #AECADB !important;
   color: #FFF;
   padding: .5rem 2rem;
-  transition: .3s; }
+  margin: 5px;
+  transition: .3s;
+  display: inline-flex;
+  cursor: pointer; }
   .btn--design:hover {
-    background-color: #385D75; }
+    color: #FFF;
+    background-color: #385D75 !important; }
 
-.btn--painting {
-  background-color: #C1E1F5;
+.btn--illustration {
+  background-color: #C1E1F5 !important;
   color: #FFF;
   padding: .5rem 2rem;
-  transition: .3s; }
-  .btn--painting:hover {
-    background-color: #385D75; }
+  margin: 5px;
+  transition: .3s;
+  display: inline-flex;
+  cursor: pointer; }
+  .btn--illustration:hover {
+    color: #FFF;
+    background-color: #385D75 !important; }
 
-.portfolioCards {
-  width: 100%; }
-  .portfolioCards div {
-    background-color: #C1E1F5;
-    width: 200px;
-    height: 200px;
-    margin: 0 .75rem 1.75rem; }
+.portfolioTab {
+  background-color: #FFF;
+  position: sticky;
+  top: 0;
+  padding: 0.5rem 0 !important; }
+
+.imgprt img {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px; }
 
 /* SKILLS STYLES */
 .skills__img {
@@ -448,3 +468,12 @@ p {
 
 .progress-bar {
   background-color: #79C6F7; }
+
+.nav-pills .nav-link {
+  border-radius: 0; }
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  background-color: #385D75 !important; }
+
+.imgprt {
+  margin: 0 .75rem 1.5rem; }

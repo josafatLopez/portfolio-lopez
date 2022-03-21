@@ -322,28 +322,37 @@ $portfolioBtn: (
    all: $blueGray,
    webDesign: $darkBlue,
    design: $mediumBlue,
-   painting: $lightBlue
+   illustration: $lightBlue
 ); 
 
 @each $btn, $color in $portfolioBtn {
    .btn--#{$btn} {
-      background-color: $color;
+      background-color: $color!important;
       color: #FFF;
       padding: .5rem 2rem;
+      margin: 5px;
       transition: .3s;
+      display: inline-flex;
+      cursor: pointer;
       &:hover {
-         background-color: $darkestBlue;
+         color: #FFF;
+         background-color: $darkestBlue!important;
       }
    }
 }
 
-.portfolioCards {
+.portfolioTab {
+   background-color: #FFF;
+   position: sticky;
+   top: 0;
+   padding: .5rem 0!important;
+}
+
+.imgprt img {
+   height: 300px;
    width: 100%;
-   div {
-      background-color: $lightBlue;
-      @include sizes(200px, 200px);
-      margin: 0 .75rem 1.75rem;
-   }
+   object-fit: cover;
+   border-radius: 10px;
 }
 
 /* SKILLS STYLES */ 
@@ -571,4 +580,16 @@ p {
 
 .progress-bar {
    background-color: $blue;
+}
+
+.nav-pills .nav-link {
+   border-radius: 0;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+   background-color: $darkestBlue!important;
+}
+
+.imgprt {
+   margin: 0 .75rem 1.5rem;
 }
