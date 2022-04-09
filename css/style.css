@@ -500,3 +500,11 @@ p {
 
 .modal-dialog img {
   height: 600px; }
+
+@media only screen and (max-width: 767px) {
+  .modal-dialog img {
+    height: 300px; } }
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .modal-dialog img {
+    height: 450px; } }
